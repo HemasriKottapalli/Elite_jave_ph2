@@ -11,8 +11,8 @@ import java.sql.SQLException;
 public class insertPhoto {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException, FileNotFoundException {
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cse","root","mysql123");
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cse","root","mysql123");
         PreparedStatement ps = con.prepareStatement("insert into photo values(?,?);");
         ps.setInt(1,1);
         File f = new File("E:\\lav.jfif");
